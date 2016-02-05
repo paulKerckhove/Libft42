@@ -6,13 +6,13 @@
 /*   By: pkerckho <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/25 11:23:34 by pkerckho          #+#    #+#             */
-/*   Updated: 2016/01/25 11:23:39 by pkerckho         ###   ########.fr       */
+/*   Updated: 2016/02/03 14:04:19 by pkerckho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int			ft_cntwrd(char const *s, char c)
+static int		ft_cntwrd(char const *s, char c)
 {
 	unsigned int	i;
 	int				cntr;
@@ -31,7 +31,7 @@ static int			ft_cntwrd(char const *s, char c)
 	return (cntr);
 }
 
-static char			*ft_strndup(const char *s, size_t n)
+char			*ft_strndup(const char *s, size_t n)
 {
 	char			*str;
 
@@ -43,7 +43,7 @@ static char			*ft_strndup(const char *s, size_t n)
 	return (str);
 }
 
-char				**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
 	int				i;
 	int				j;

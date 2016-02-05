@@ -1,21 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strnjoin.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pkerckho <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/25 11:09:50 by pkerckho          #+#    #+#             */
-/*   Updated: 2016/01/29 09:59:22 by pkerckho         ###   ########.fr       */
+/*   Created: 2016/02/02 11:53:51 by pkerckho          #+#    #+#             */
+/*   Updated: 2016/02/03 12:47:49 by pkerckho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
-int			ft_isalnum(int c)
+char		*ft_strnjoin(char const *s1, char const *s2, size_t len)
 {
-	if (ft_isalpha(c) || ft_isdigit(c))
-		return (1);
-	else
-		return (0);
+	char	*str;
+	int		nbr;
+	char	*d;
+
+	nbr = ft_strlen(s1) + ++len;
+	str = ft_strnew(nbr);
+	d = str;
+	while (*s1)
+		*str++ = *s1++;
+	while (*s2 && --len > 0)
+		*str++ = *s2++;
+	*str = '\0';
+	return (str - (str - d));
 }

@@ -6,7 +6,7 @@
 /*   By: pkerckho <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/25 11:24:48 by pkerckho          #+#    #+#             */
-/*   Updated: 2016/01/25 11:24:52 by pkerckho         ###   ########.fr       */
+/*   Updated: 2016/02/03 13:56:00 by pkerckho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,5 +87,6 @@ int					ft_isupper(int c);
 int					ft_islower(int c);
 int					ft_wordcount(char const *s, char c);
 void				ft_swap(int *a, int *b);
-
+char				*ft_strndup(const char *s1, size_t n);
+char				*ft_strnjoin(char const *s1, char const *s2, size_t len);
 #endif

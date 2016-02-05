@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pkerckho <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/25 11:09:50 by pkerckho          #+#    #+#             */
-/*   Updated: 2016/01/29 09:59:22 by pkerckho         ###   ########.fr       */
+/*   Created: 2016/01/29 09:47:14 by pkerckho          #+#    #+#             */
+/*   Updated: 2016/02/04 11:29:20 by pkerckho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
+# define BUFF_SIZE 1000000
 
-int			ft_isalnum(int c)
-{
-	if (ft_isalpha(c) || ft_isdigit(c))
-		return (1);
-	else
-		return (0);
-}
+# include <fcntl.h>
+# include <unistd.h>
+# include "libft/includes/libft.h"
+
+int		get_next_line(int const fd, char **line);
+
+#endif
