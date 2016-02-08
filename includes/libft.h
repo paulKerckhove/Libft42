@@ -6,12 +6,13 @@
 /*   By: pkerckho <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/25 11:24:48 by pkerckho          #+#    #+#             */
-/*   Updated: 2016/02/03 13:56:00 by pkerckho         ###   ########.fr       */
+/*   Updated: 2016/02/08 16:08:16 by pkerckho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# define BUFF_SIZE 32
 
 # include <string.h>
 # include <unistd.h>
@@ -89,4 +90,5 @@ int					ft_wordcount(char const *s, char c);
 void				ft_swap(int *a, int *b);
 char				*ft_strndup(const char *s1, size_t n);
 char				*ft_strnjoin(char const *s1, char const *s2, size_t len);
+int					ft_get_next_line(int const fd, char **line);
 #endif
